@@ -1,6 +1,21 @@
 #pragma once
 
 #include <JuceHeader.h>
+struct Car
+{
+    int numberOfWheels;
+    bool convertible;
+    struct CarSeat
+    {
+        bool seatIsLeather;
+    };
+    CarSeat driverSeat;
+    CarSeat navigatorSeat;
+
+    bool switchSeats(CarSeat oldSeat, CarSeat newSeat);
+
+    void accelerate(float howFarToPushThePedal);
+};
 
 //==============================================================================
 /*
